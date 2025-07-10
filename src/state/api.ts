@@ -84,10 +84,13 @@ export const api = createApi({
       }),
       invalidatesTags: ["Products"],
     }),
-    getUsers: build.query<User[], void>({
-      query: () => "/users",
-      providesTags: ["Users"],
+    getUsers: build.query<User[], string | void>({
+      query: (search) => ({
+        url: "/users",
+         params: search ? { search } : {},
     }),
+    providesTags: ["Users"],
+  }),
     getExpensesByCategory: build.query<ExpenseByCategorySummary[], void>({
       query: () => "/expenses",
       providesTags: ["Expenses"],

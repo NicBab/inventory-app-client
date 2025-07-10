@@ -94,10 +94,10 @@ const Products = () => {
                 <h3 className="text-lg text-gray-900 font-semibold">
                   {product.name}
                 </h3>
-                  <div className="text-sm text-gray-600 mt-1">
+                <div className="text-sm text-gray-600 mt-1">
                   Mfg: {product.mfr}
                 </div>
-                          <div className="text-sm text-gray-600 mt-1">
+                <div className="text-sm text-gray-600 mt-1">
                   Sku: {product.sku}
                 </div>
                 <p className="text-gray-800">${product.price.toFixed(2)}</p>
