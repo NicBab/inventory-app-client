@@ -2,6 +2,8 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export interface Product {
   productId: string;
+  mfr: string;
+  sku: string;
   name: string;
   price: number;
   rating?: number;
@@ -10,6 +12,8 @@ export interface Product {
 
 export interface NewProduct {
   name: string;
+  mfr: string;
+  sku: string;
   price: number;
   rating?: number;
   stockQuantity: number;
